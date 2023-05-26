@@ -18,12 +18,12 @@
                 {% if event.logo %}<image src="{{ event.logo.url }}" style="border-radius:5px !important;width: 150px !important;height: 150px !important;"   alt="no image"/>{%endif%}
             </div>
                 <div class="p-2 mt-5  ">
-                {% if event.background_img %}<image src="{{ event.background_img.url }}" style="width:100%"   alt="no image"/>{%endif%}
+                {% if event.background_img %}<image src="{{ event.background_img.url }}" style="width: 450px !important;"  alt="no image"/>{%endif%}
                     </div>
             </div>
 
     <!-- /.login-logo -->
-    <div class="card card-outline card-primary widd" style="">
+    <div class="card card-outline card-primary widd mt-3" style="">
         <div class="card-header text-center">
             <p  class="h1">
                 <b>Event:</b> {{event.title|capfirst}}

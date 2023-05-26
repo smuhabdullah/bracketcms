@@ -81,17 +81,17 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 # import dj_database_url
 
-# DATABASES = {
-#    'default': dj_database_url.config()
-# }
+DATABASES = {
+   'default': dj_database_url.config()
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -129,18 +129,26 @@ USE_TZ = True
 
 # STATIC_ROOT = 'https://certificate-system.herokuapp.com/static/'
 
-STATIC_URL = '/static/'
+STATIC_URL = '/home/bracketcms/bracketcms'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# MEDIA settings
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# STATIC_URL = '/static/'
 # enable for deployment
 #STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # local setting for static files
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+# ]
 
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type
